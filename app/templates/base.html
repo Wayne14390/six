@@ -1,5 +1,4 @@
 {% load static %}
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,7 +22,7 @@
                     <a href="{% url 'index' %}" class="nav-item nav-link active">Home</a>
                     <a href="{% url 'about' %}" class="nav-item nav-link">About Us</a>
                     <a href="{% url 'classes' %}" class="nav-item nav-link">Classes</a>
-                   <a href="{% url 'studentrecords' %}" class="nav-item nav-link">Student</a>
+                   <a href="{% url 'student_list' %}" class="nav-item nav-link">Student</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
@@ -33,7 +32,7 @@
                     </div>
                     <a href="{% url 'contact' %}" class="nav-item nav-link">Contact Us</a>
                 </div>
-                <a href="{% url 'call-to-action' %}" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Join Us<i class="fa fa-arrow-right ms-3"></i></a>
+                <a href="{% url 'call_to_action' %}" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Join Us<i class="fa fa-arrow-right ms-3"></i></a>
             </div>
         </nav>
         <!-- Navbar End -->
@@ -104,7 +103,7 @@
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                             &copy; <a class="border-bottom" href="#">Dice</a>, All Right Reserved.
-
+                        </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
                                 <a href="">Home</a>
@@ -116,9 +115,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+</div>
 {% endblock %}
-
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="{% static 'styles/bootstrap/js/bootstrap.js' %}"></script>
 </body>
 </html>

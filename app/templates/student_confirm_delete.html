@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Student</title>
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 1em;
+            text-align: center;
+        }
+        button {
+            padding: 1em;
+            border: none;
+            background: #333333;
+            color: #FFFFFF;
+            border-radius: 3px;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+        button:hover {
+            background: #555555;
+        }
+        .actions {
+            display: flex;
+            justify-content: center;
+            margin-top: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Delete Student</h1>
+        <p>Are you sure you want to delete {{ student.student_name }}?</p>
+        <div class="actions">
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit">Yes, delete</button>
+            </form>
+            <a href="{% url 'student_list' %}"><button type="button">Cancel</button></a>
+        </div>
+    </div>
+</body>
+</html>

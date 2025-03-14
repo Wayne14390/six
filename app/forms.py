@@ -1,20 +1,21 @@
 from django import forms
 
-from app.models import Students
+from app.models import Student
 
 
-class StudentsForm(forms.ModelForm):
+class StudentForm(forms.ModelForm):
     class Meta:
-        model = Students
+        model = Student
         fields = '__all__'
         widgets = {
-            'name': forms.TextInput(attrs={'class': 'form-control','placeholder': 'Enter your name'}),
-            'age': forms.NumberInput(attrs={'class': 'form-control','placeholder': 'Enter your age'}),
-            'gender': forms.Select(attrs={'class': 'form-control','placeholder': 'Enter your gender'}),
-            'date_of_birth':forms.DateInput(attrs={'class': 'form-control','placeholder': 'Enter your D.O.B'}),
+            'guardian_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder':'Enter your guardian name'}),
+            'child_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder':'Enter your child name'}),
+            'guardian_email': forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Enter your guardian email'}),
+            'age': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Enter your child age'}),
             'image': forms.ClearableFileInput(
                 attrs={'class': 'form-control',
-                       'accept':'image/*',
-                       'title': 'Select an image'}
-            )
+                       'accept': 'image/*',
+                       'title': 'Select your image'
+                       }
+            ),
         }

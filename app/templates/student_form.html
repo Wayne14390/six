@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Form</title>
+    <style>
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 1em;
+        }
+        div + div {
+            margin-top: 1em;
+        }
+        label {
+            display: block;
+            margin-bottom: .5em;
+            color: #333333;
+        }
+        input, textarea {
+            border: 1px solid #CCCCCC;
+            font: 1em sans-serif;
+            width: 100%;
+            box-sizing: border-box;
+            padding: .5em;
+        }
+        input:focus, textarea:focus {
+            border-color: #000;
+        }
+        button {
+            padding: 1em;
+            border: none;
+            background: #333333;
+            color: #FFFFFF;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #555555;
+        }
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ form.instance.pk|yesno:"Edit Student,Add Student" }}</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="form-actions">
+            <button type="submit">{{ form.instance.id|yesno:"Update,Add" }}</button>
+            <a href="{% url 'student_list' %}">Cancel</a>
+        </div>
+    </form>
+</body>
+</html>

@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,9 +26,13 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('contact/', views.contact, name='contact'),
     path('classes/', views.classes, name='classes'),
-    path('faclity/', views.facility, name='facility'),
+    path('facility/', views.facility, name='facility'),
     path('appointment/', views.appointment, name='appointment'),
     path('team/', views.team, name='team'),
-    path('call-to-action/', views.call, name='call-to-action'),
-    path('studentrecords/', views.studentrecords, name='studentrecords'),
-]
+    path('call_to_action/', views.call, name='call_to_action'),
+    path('student_list/', views.student_list, name='student_list'),
+    path('student_create/', views.student_create, name='student_create'),
+    path('student_update/<int:id>/', views.student_update, name='student_update'),
+    path('student_delete/<int:id>/', views.student_delete, name='student_delete'),
+
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
