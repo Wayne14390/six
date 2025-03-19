@@ -2,7 +2,10 @@
 {% block title %}Student List{% endblock %}
 
 {% block content %}
-    <h1>Student List</h1>
+<div class="row">
+    <dev class="col-md-2"></dev>
+    <dev class="col-md-8">
+            <h1>Student List</h1>
     <a href="{% url 'student_create' %}">Add Student</a>
     <table>
         <thead>
@@ -20,7 +23,7 @@
                 <td>{{ student.student_name }}</td>
                 <td>{{ student.student_bio }}</td>
                 <td class="actions">
-                    <a href="{% url 'student_update' student.id %}">Edit</a>
+                    <a href="{% url 'editstudent' student.id %}">Edit</a>
                     <form action="{% url 'student_delete' student.id %}" method="post" style="display: inline;">
                         {% csrf_token %}
                         <button type="submit">Delete</button>
@@ -30,4 +33,8 @@
             {% endfor %}
         </tbody>
     </table>
+
+    </dev>
+    <dev class="col-md-2"></dev>
+</div>
 {% endblock %}

@@ -36,20 +36,21 @@ def student_create(request):
         form = StudentForm()
     return render(request, 'student_form.html', {'form': form})
 
-def student_update(request, pk):
-    student = get_object_or_404(Student, id=id)
-    if request.method == 'POST':
-        form = StudentForm(request.POST, request.FILES, instance=student)
+def editstudent(request, id):
+    student = get_object_or_404(Student ,id=id)
+    if request.method == "POST":
+        form = StudentForm(request.POST,instance=student)
         if form.is_valid():
-            form.save()
-            return redirect('student_list')
+           form.save()
+           return redirect('student_list')
     else:
-        form = StudentForm(instance=student)
-    return render(request, 'student_form.html', {'form': form})
-
-def student_delete(request, pk):
-    student = get_object_or_404(Student, id=id)
-    if request.method == 'POST':
+           form = StudentForm( instance=student)
+    return render(request, 'editstudent.html',{'form': form, 'student': student})
+def student_delete(request, id):
+    student = get_object_or_404(Student ,id=id)
+    try:
         student.delete()
-        return redirect('student_list')
-    return render(request, 'student_confirm_delete.html', {'student': student})
+    except Exception as e:
+        messages.error(request,'Student not deleted')
+    return redirect('student_list')
+

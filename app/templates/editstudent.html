@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Nurse LIst{% endblock %}
+{% block content %}
+<h2>Edit Student Form</h2>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button class="btn btn-success" >Edit Student</button>
+</form>
+{% endblock %}

@@ -32,7 +32,6 @@ urlpatterns = [
     path('call_to_action/', views.call, name='call_to_action'),
     path('student_list/', views.student_list, name='student_list'),
     path('student_create/', views.student_create, name='student_create'),
-    path('student_update/<int:id>/', views.student_update, name='student_update'),
     path('student_delete/<int:id>/', views.student_delete, name='student_delete'),
-
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('editstudent/<int:id>/', views.editstudent, name='editstudent'),
+  ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
