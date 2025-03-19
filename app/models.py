@@ -7,3 +7,13 @@ class Student(models.Model):
 
     def __str__(self):
         return self.student_name
+
+class Appointment(models.Model):
+    guardian_name = models.CharField(max_length=255)
+    guardian_email = models.EmailField()
+    child_name = models.CharField(max_length=255)
+    child_age = models.IntegerField()
+    message = models.TextField()
+
+    def __str__(self):
+        return self.guardian_name

@@ -1,6 +1,6 @@
 from django import forms
 
-from app.models import Student
+from app.models import Student,Appointment
 
 
 class StudentForm(forms.ModelForm):
@@ -16,4 +16,16 @@ class StudentForm(forms.ModelForm):
 ),
             'student_name': forms.TextInput(attrs={'class': 'form-control'}),
             'student_bio': forms.Textarea(attrs={'class': 'form-control'}),
+        }
+
+class AppointmentForm(forms.ModelForm):
+    class Meta:
+        model = Appointment
+        fields = ['guardian_name', 'guardian_email', 'child_name','child_age','message']
+        widgets = {
+            'guardian_name': forms.TextInput(attrs={'class': 'form-control'}),
+            'guardian_email': forms.Textarea(attrs={'class': 'form-control'}),
+            'child_name': forms.TextInput(attrs={'class': 'form-control'}),
+            'child_age': forms.NumberInput(attrs={'class': 'form-control'}),
+            'message': forms.Textarea(attrs={'class': 'form-control'}),
         }

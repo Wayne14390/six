@@ -34,4 +34,7 @@ urlpatterns = [
     path('student_create/', views.student_create, name='student_create'),
     path('student_delete/<int:id>/', views.student_delete, name='student_delete'),
     path('editstudent/<int:id>/', views.editstudent, name='editstudent'),
+    path('appointment_list/', views.appointment_list, name='appointment_list'),
+    path('editappointment/<int:id>/', views.editappointment, name='editappointment'),
+    path('appointment_delete/<int:id>/', views.appointment_delete, name='appointment_delete'),
   ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

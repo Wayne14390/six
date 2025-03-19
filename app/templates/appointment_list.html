@@ -1,0 +1,43 @@
+<{% extends "base.html" %}
+{% block title %}Appointment List{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+            <h1>Appointment List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Guardian Name</th>
+                <th>Guardian Email</th>
+                <th>Child Name</th>
+                <th>Child Age</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for y in appointments %}
+            <tr>
+                <td></td>
+                <td>{{ y.guardian_name }}</td>
+                <td>{{ y.guardian_email }}</td>
+                <td>{{ y.child_name }}</td>
+                <td>{{ y.child_age }}</td>
+                <td>{{ y.message }}</td>
+                <td class="actions">
+                    <a href="{% url 'editappointment' y.id %}">Edit Appointment</a>
+                    <form action="{% url 'appointment_delete' y.id %}" onclick="return confirm('Are you sure you want to delete the Appointment?')" style="display: inline;">
+                        {% csrf_token %}
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    </div>
+    <div class="col-md-2"></div>
+</div>
+{% endblock %}

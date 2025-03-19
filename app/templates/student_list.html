@@ -3,8 +3,8 @@
 
 {% block content %}
 <div class="row">
-    <dev class="col-md-2"></dev>
-    <dev class="col-md-8">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
             <h1>Student List</h1>
     <a href="{% url 'student_create' %}">Add Student</a>
     <table>
@@ -24,7 +24,7 @@
                 <td>{{ student.student_bio }}</td>
                 <td class="actions">
                     <a href="{% url 'editstudent' student.id %}">Edit</a>
-                    <form action="{% url 'student_delete' student.id %}" method="post" style="display: inline;">
+                    <form action="{% url 'student_delete' student.id %}" onclick="return confirm('Are you sure you want to delete the student?')" style="display: inline;">
                         {% csrf_token %}
                         <button type="submit">Delete</button>
                     </form>
@@ -34,7 +34,7 @@
         </tbody>
     </table>
 
-    </dev>
-    <dev class="col-md-2"></dev>
+    </div>
+    <div class="col-md-2"></div>
 </div>
 {% endblock %}

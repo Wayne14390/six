@@ -1,7 +1,7 @@
 from django.contrib import messages
 from django.shortcuts import render, redirect, get_object_or_404
 
-from .forms import StudentForm
+from .forms import StudentForm, AppointmentForm
 from app.models import Student
 
 
@@ -20,7 +20,36 @@ def team(request):
 def call(request):
     return render(request, 'call_to_action.html')
 def appointment(request):
-    return render(request, 'appointment.html')
+    if request.method == 'POST':
+        form = AppointmentForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('appointment_list')
+    else:
+        form = AppointmentForm()
+    return render(request, 'appointment.html', {'form': form})
+
+def appointment_list(request):
+    appointments = Appointment.objects.all()
+    return render(request, 'appointment_list.html',{'appointment': appointments})
+
+def editappointment(request, id):
+    appointments = get_object_or_404(Student ,id=id)
+    if request.method == "POST":
+        form = AppointmentForm(request.POST,instance=appointments)
+        if form.is_valid():
+           form.save()
+           return redirect('appointment_list')
+    else:
+           form = AppointmentForm( instance=appointments)
+    return render(request, 'editappointment.html',{'form': form, 'appointments': appointments})
+def appointment_delete(request, id):
+    appointments = get_object_or_404(Student ,id=id)
+    try:
+        appointments.delete()
+    except Exception as e:
+        messages.error(request,'Appointment not deleted')
+    return redirect('appointment_list')
 
 def student_list(request):
     students = Student.objects.all()
