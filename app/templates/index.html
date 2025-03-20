@@ -3,42 +3,71 @@
 {% block content %}
     <div class="container-xxl bg-white p-0">
 
-        <!-- Carousel Start -->
-        <div class="container-fluid p-0 mb-5">
-            <div class="owl-carousel header-carousel position-relative">
-                <div class="owl-carousel-item position-relative">
-                    <img class="img-fluid" src="../../static/images/carousel-1.jpg" alt="">
+<!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
+
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+                    <img class="img-fluid" src="../../static/images/carousel-1.jpg" alt="" width="100%" height="">
                     <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .2);">
                         <div class="container">
                             <div class="row justify-content-start">
                                 <div class="col-10 col-lg-8">
                                     <h1 class="display-2 text-white animated slideInDown mb-4">The Best Kindergarten School For Your Child</h1>
-                                    <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
+                                    <p class="fs-5 fw-medium text-white mb-4 pb-2">An enabling environment for the growth of children no matter what origins or background</p>
                                     <a href="" class="btn btn-primary rounded-pill py-sm-3 px-sm-5 me-3 animated slideInLeft">Learn More</a>
                                     <a href="" class="btn btn-dark rounded-pill py-sm-3 px-sm-5 animated slideInRight">Our Classes</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="owl-carousel-item position-relative">
-                    <img class="img-fluid" src="../../static/images/carousel-2.jpg" alt="">
+    </div>
+    <div class="carousel-item">
+                    <img class="img-fluid" src="../../static/images/carousel-2.jpg" alt="" width="100%">
                     <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .2);">
                         <div class="container">
                             <div class="row justify-content-start">
                                 <div class="col-10 col-lg-8">
                                     <h1 class="display-2 text-white animated slideInDown mb-4">Make A Brighter Future For Your Child</h1>
-                                    <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
+                                    <p class="fs-5 fw-medium text-white mb-4 pb-2">Invest in your childrens future and watch them grow before your eyes here ata Dice</p>
                                     <a href="" class="btn btn-primary rounded-pill py-sm-3 px-sm-5 me-3 animated slideInLeft">Learn More</a>
                                     <a href="" class="btn btn-dark rounded-pill py-sm-3 px-sm-5 animated slideInRight">Our Classes</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <!-- Carousel End -->
+    </div>
+    <div class="carousel-item">
+                    <img class="img-fluid" src="../../static/images/WhatsApp Image 2025-03-20 at 10.17.19.jpeg" alt="" width="100%">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .2);">
+                        <div class="container">
+                            <div class="row justify-content-start">
+                                <div class="col-10 col-lg-8">
+                                    <div><p class="fs-5 fw-medium text-white mb-4 pb-2">We ensure children have a healthy life</p></div>
+                                    <div class="heart "></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
 
 
         <!-- Facilities Start -->
@@ -46,7 +75,7 @@
             <div class="container">
                 <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                     <h1 class="mb-3">School Facilities</h1>
-                    <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+                    <p>Here at Dice Kindergarten we offer very diverse and well equipped Facilities to ensure your childrens wellbeing in all aspects are in good hands</p>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -58,7 +87,7 @@
                             </div>
                             <div class="facility-text bg-primary">
                                 <h3 class="text-primary mb-3">School Bus</h3>
-                                <p class="mb-0">Eirmod sed ipsum dolor sit rebum magna erat lorem kasd vero ipsum sit</p>
+                                <p class="mb-0">We offers bus services to pick and drop off children saving you time and effort to drop them, as well as taking your children on fun and productive trips all around!</p>
                             </div>
                         </div>
                     </div>
@@ -71,7 +100,7 @@
                             </div>
                             <div class="facility-text bg-success">
                                 <h3 class="text-success mb-3">Playground</h3>
-                                <p class="mb-0">Eirmod sed ipsum dolor sit rebum magna erat lorem kasd vero ipsum sit</p>
+                                <p class="mb-0">All work and no play makes Jack a dull boy! And we aim to prevent that in equipped and safe playgrounds,To ensure proper playtime and interaction among their peers</p>
                             </div>
                         </div>
                     </div>
@@ -84,7 +113,7 @@
                             </div>
                             <div class="facility-text bg-warning">
                                 <h3 class="text-warning mb-3">Healthy Canteen</h3>
-                                <p class="mb-0">Eirmod sed ipsum dolor sit rebum magna erat lorem kasd vero ipsum sit</p>
+                                <p class="mb-0">Children can be energy intensive,constantly needing food as they grow. Here we provide food in healthy quality and proper Quantity!</p>
                             </div>
                         </div>
                     </div>
@@ -97,7 +126,7 @@
                             </div>
                             <div class="facility-text bg-info">
                                 <h3 class="text-info mb-3">Positive Learning</h3>
-                                <p class="mb-0">Eirmod sed ipsum dolor sit rebum magna erat lorem kasd vero ipsum sit</p>
+                                <p class="mb-0">To change a system,one must change its people. Children will form our future workers and leaders so it is vital to teach them proper such as integrity and open their eyes to the world</p>
                             </div>
                         </div>
                     </div>
@@ -113,8 +142,8 @@
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                         <h1 class="mb-4">Learn More About Our Work And Our Cultural Activities</h1>
-                        <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                        <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum. Clita clita labore, dolor duo nonumy clita sit at, sed sit sanctus dolor eos, ipsum labore duo duo sit no sea diam. Et dolor et kasd ea. Eirmod diam at dolor est vero nonumy magna.</p>
+                        <p>First formed in 2025,Our aims were to provide a place where parents can drop off their children and they come back better than yesterday. here to we conduct cultural activities suited to our children to explore their culture and talents.</p>
+                        <p class="mb-4">Tap Read More to find out even more activities we will provide and engage your children in</p>
                         <div class="row g-4 align-items-center">
                             <div class="col-sm-6">
                                 <a class="btn btn-primary rounded-pill py-3 px-5" href="">Read More</a>
@@ -149,38 +178,13 @@
         <!-- About End -->
 
 
-        <!-- Call To Action Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="bg-light rounded">
-                    <div class="row g-0">
-                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s" style="min-height: 400px;">
-                            <div class="position-relative h-100">
-                                <img class="position-absolute w-100 h-100 rounded" src="../../static/images/call-to-action.jpg" style="object-fit: cover;">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                            <div class="h-100 d-flex flex-column justify-content-center p-5">
-                                <h1 class="mb-4">Become A Teacher</h1>
-                                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.
-                                    Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
-                                </p>
-                                <a class="btn btn-primary py-3 px-5" href="">Get Started Now<i class="fa fa-arrow-right ms-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Call To Action End -->
-
 
         <!-- Classes Start -->
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                     <h1 class="mb-3">School Classes</h1>
-                    <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+                    <p></p>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -194,11 +198,11 @@
                                     <div class="d-flex align-items-center">
                                         <img class="rounded-circle flex-shrink-0" src="../../static/images/user.jpg" alt="" style="width: 45px; height: 45px;">
                                         <div class="ms-3">
-                                            <h6 class="text-primary mb-1">Jhon Doe</h6>
+                                            <h6 class="text-primary mb-1">Peter Robinson</h6>
                                             <small>Teacher</small>
                                         </div>
                                     </div>
-                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>
+                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$90</span>
                                 </div>
                                 <div class="row g-1">
                                     <div class="col-4">
@@ -234,11 +238,11 @@
                                     <div class="d-flex align-items-center">
                                         <img class="rounded-circle flex-shrink-0" src="../../static/images/user.jpg" alt="" style="width: 45px; height: 45px;">
                                         <div class="ms-3">
-                                            <h6 class="text-primary mb-1">Jhon Doe</h6>
+                                            <h6 class="text-primary mb-1">John Paprika</h6>
                                             <small>Teacher</small>
                                         </div>
                                     </div>
-                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>
+                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$50</span>
                                 </div>
                                 <div class="row g-1">
                                     <div class="col-4">
@@ -274,11 +278,11 @@
                                     <div class="d-flex align-items-center">
                                         <img class="rounded-circle flex-shrink-0" src="../../static/images/user.jpg" alt="" style="width: 45px; height: 45px;">
                                         <div class="ms-3">
-                                            <h6 class="text-primary mb-1">Jhon Doe</h6>
+                                            <h6 class="text-primary mb-1">Mark hamil</h6>
                                             <small>Teacher</small>
                                         </div>
                                     </div>
-                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>
+                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$70</span>
                                 </div>
                                 <div class="row g-1">
                                     <div class="col-4">
@@ -314,11 +318,11 @@
                                     <div class="d-flex align-items-center">
                                         <img class="rounded-circle flex-shrink-0" src="../../static/images/user.jpg" alt="" style="width: 45px; height: 45px;">
                                         <div class="ms-3">
-                                            <h6 class="text-primary mb-1">Jhon Doe</h6>
+                                            <h6 class="text-primary mb-1">Platelets lets Play</h6>
                                             <small>Teacher</small>
                                         </div>
                                     </div>
-                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>
+                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$50</span>
                                 </div>
                                 <div class="row g-1">
                                     <div class="col-4">
@@ -354,11 +358,11 @@
                                     <div class="d-flex align-items-center">
                                         <img class="rounded-circle flex-shrink-0" src="../../static/images/user.jpg" alt="" style="width: 45px; height: 45px;">
                                         <div class="ms-3">
-                                            <h6 class="text-primary mb-1">Jhon Doe</h6>
+                                            <h6 class="text-primary mb-1">John Doe</h6>
                                             <small>Teacher</small>
                                         </div>
                                     </div>
-                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>
+                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$49</span>
                                 </div>
                                 <div class="row g-1">
                                     <div class="col-4">
@@ -394,11 +398,11 @@
                                     <div class="d-flex align-items-center">
                                         <img class="rounded-circle flex-shrink-0" src="../../static/images/user.jpg" alt="" style="width: 45px; height: 45px;">
                                         <div class="ms-3">
-                                            <h6 class="text-primary mb-1">Jhon Doe</h6>
+                                            <h6 class="text-primary mb-1">Roberta Hamil</h6>
                                             <small>Teacher</small>
                                         </div>
                                     </div>
-                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>
+                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$59</span>
                                 </div>
                                 <div class="row g-1">
                                     <div class="col-4">
@@ -428,81 +432,20 @@
         </div>
         <!-- Classes End -->
 
-
-        <!-- Appointment Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="bg-light rounded">
-                    <div class="row g-0">
-                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                            <div class="h-100 d-flex flex-column justify-content-center p-5">
-                                <h1 class="mb-4">Make Appointment</h1>
-                                <form>
-                                    <div class="row g-3">
-                                        <div class="col-sm-6">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control border-0" id="gname" placeholder="Gurdian Name">
-                                                <label for="gname">Gurdian Name</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-floating">
-                                                <input type="email" class="form-control border-0" id="gmail" placeholder="Gurdian Email">
-                                                <label for="gmail">Gurdian Email</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control border-0" id="cname" placeholder="Child Name">
-                                                <label for="cname">Child Name</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control border-0" id="cage" placeholder="Child Age">
-                                                <label for="cage">Child Age</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="form-floating">
-                                                <textarea class="form-control border-0" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                                <label for="message">Message</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
-                            <div class="position-relative h-100">
-                                <img class="position-absolute w-100 h-100 rounded" src="../../static/images/appointment.jpg" style="object-fit: cover;">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Appointment End -->
-
-
         <!-- Team Start -->
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                     <h1 class="mb-3">Popular Teachers</h1>
-                    <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit
-                        eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+                    <p>Voted democratically by our Students here are all the popular teachers loved by many here at Dice.</p>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="team-item position-relative">
                             <img class="img-fluid rounded-circle w-75" src="../../static/images/team-1.jpg" alt="">
                             <div class="team-text">
-                                <h3>Full Name</h3>
-                                <p>Designation</p>
+                                <h3>Roberta Hamil</h3>
+                                <p>General Knowledge Teacher</p>
                                 <div class="d-flex align-items-center">
                                     <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -515,8 +458,8 @@
                         <div class="team-item position-relative">
                             <img class="img-fluid rounded-circle w-75" src="../../static/images/team-2.jpg" alt="">
                             <div class="team-text">
-                                <h3>Full Name</h3>
-                                <p>Designation</p>
+                                <h3>Mark Hamil</h3>
+                                <p>Athletic and Dance Teacher</p>
                                 <div class="d-flex align-items-center">
                                     <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -529,8 +472,8 @@
                         <div class="team-item position-relative">
                             <img class="img-fluid rounded-circle w-75" src="../../static/images/team-3.jpg" alt="">
                             <div class="team-text">
-                                <h3>Full Name</h3>
-                                <p>Designation</p>
+                                <h3>Lucy Hamil</h3>
+                                <p>Secretary</p>
                                 <div class="d-flex align-items-center">
                                     <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -550,38 +493,38 @@
             <div class="container">
                 <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                     <h1 class="mb-3">Our Clients Say!</h1>
-                    <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+                    <p>Absolutely phenomenal school with good facilities and good teachers</p>
                 </div>
                 <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
                     <div class="testimonial-item bg-light rounded p-5">
-                        <p class="fs-5">Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
+                        <p class="fs-5">My son says he loves it here and even ave me a ten minute lesson on The Industrial revolution and its Consequences,hes learnt so much. Keep going Dice!</p>
                         <div class="d-flex align-items-center bg-white me-n5" style="border-radius: 50px 0 0 50px;">
                             <img class="img-fluid flex-shrink-0 rounded-circle" src="../../static/images/testimonial-1.jpg" style="width: 90px; height: 90px;">
                             <div class="ps-3">
-                                <h3 class="mb-1">Client Name</h3>
-                                <span>Profession</span>
+                                <h3 class="mb-1">Regina</h3>
+                                <span>Developer</span>
                             </div>
                             <i class="fa fa-quote-right fa-3x text-primary ms-auto d-none d-sm-flex"></i>
                         </div>
                     </div>
                     <div class="testimonial-item bg-light rounded p-5">
-                        <p class="fs-5">Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
+                        <p class="fs-5">If i could have gone here myself i would have but im glad my daughter got to come here,its really taught her alot here. </p>
                         <div class="d-flex align-items-center bg-white me-n5" style="border-radius: 50px 0 0 50px;">
                             <img class="img-fluid flex-shrink-0 rounded-circle" src="../../static/images/testimonial-2.jpg" style="width: 90px; height: 90px;">
                             <div class="ps-3">
-                                <h3 class="mb-1">Client Name</h3>
-                                <span>Profession</span>
+                                <h3 class="mb-1">Bob Ross</h3>
+                                <span>Painter</span>
                             </div>
                             <i class="fa fa-quote-right fa-3x text-primary ms-auto d-none d-sm-flex"></i>
                         </div>
                     </div>
                     <div class="testimonial-item bg-light rounded p-5">
-                        <p class="fs-5">Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
+                        <p class="fs-5">I will say that this school is worth every penny,from the lessons to the events and the staff,all in all a 10/10 school</p>
                         <div class="d-flex align-items-center bg-white me-n5" style="border-radius: 50px 0 0 50px;">
                             <img class="img-fluid flex-shrink-0 rounded-circle" src="../../static/images/testimonial-3.jpg" style="width: 90px; height: 90px;">
                             <div class="ps-3">
-                                <h3 class="mb-1">Client Name</h3>
-                                <span>Profession</span>
+                                <h3 class="mb-1">Richard Dixson</h3>
+                                <span>Business Man</span>
                             </div>
                             <i class="fa fa-quote-right fa-3x text-primary ms-auto d-none d-sm-flex"></i>
                         </div>

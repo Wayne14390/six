@@ -501,3 +501,47 @@ h6,
     padding-right: 0;
     border-right: none;
 }
+
+.heart {
+            position: relative;
+            width: 15px;
+            height: 10px;
+            margin-left: 550px;
+        }
+.heart:before,
+.heart:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 60px;
+            height: 90px;
+            border-radius: 100px 100px 0 0;
+            background: red;
+        }
+.heart:before {
+            left: 50px;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+.heart:after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+@keyframes dance {
+    0%, 100% {
+                transform: scale(1);
+            }
+         50% {
+                transform: scale(1.2);
+            }
+        }
+.heart {
+            animation: dance 0.5s infinite;
+        }
+.carousel-item{
+    height: 600px;
+}
+.container{
+    padding: 200px;
+}

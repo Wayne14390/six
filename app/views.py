@@ -2,7 +2,7 @@ from django.contrib import messages
 from django.shortcuts import render, redirect, get_object_or_404
 
 from .forms import StudentForm, AppointmentForm
-from app.models import Student
+from app.models import Student,Appointment
 
 
 def index(request):
@@ -31,20 +31,20 @@ def appointment(request):
 
 def appointment_list(request):
     appointments = Appointment.objects.all()
-    return render(request, 'appointment_list.html',{'appointment': appointments})
+    return render(request, 'appointment_list.html',{'appointments': appointments})
 
 def editappointment(request, id):
-    appointments = get_object_or_404(Student ,id=id)
+    appointments = get_object_or_404(Appointment ,id=id)
     if request.method == "POST":
-        form = AppointmentForm(request.POST,instance=appointments)
-        if form.is_valid():
-           form.save()
+        form1 = AppointmentForm(request.POST,instance=appointments)
+        if form1.is_valid():
+           form1.save()
            return redirect('appointment_list')
     else:
-           form = AppointmentForm( instance=appointments)
-    return render(request, 'editappointment.html',{'form': form, 'appointments': appointments})
+           form1 = AppointmentForm( instance=appointments)
+    return render(request, 'editappointment.html',{'form1': form1, 'appointments': appointments})
 def appointment_delete(request, id):
-    appointments = get_object_or_404(Student ,id=id)
+    appointments = get_object_or_404(Appointment ,id=id)
     try:
         appointments.delete()
     except Exception as e:

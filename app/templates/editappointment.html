@@ -1,10 +1,10 @@
 {% extends "base.html" %}
-{% block title %}Nurse LIst{% endblock %}
+{% block title %}Appointment LIst{% endblock %}
 {% block content %}
 <h2>Edit Appointment Form</h2>
 <form action="" method="post">
     {% csrf_token %}
-    {{ form }}
+    {{ form1 }}
     <button class="btn btn-success" >Edit Appointment</button>
 </form>
 {% endblock %}
