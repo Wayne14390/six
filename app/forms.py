@@ -24,7 +24,7 @@ class AppointmentForm(forms.ModelForm):
         fields = ['guardian_name', 'guardian_email', 'child_name','child_age','message']
         widgets = {
             'guardian_name': forms.TextInput(attrs={'class': 'form-control'}),
-            'guardian_email': forms.Textarea(attrs={'class': 'form-control'}),
+            'guardian_email': forms.TextInput(attrs={'class': 'form-control'}),
             'child_name': forms.TextInput(attrs={'class': 'form-control'}),
             'child_age': forms.NumberInput(attrs={'class': 'form-control'}),
             'message': forms.Textarea(attrs={'class': 'form-control'}),

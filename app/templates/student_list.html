@@ -22,10 +22,10 @@
                 <td>{{ student.student_name }}</td>
                 <td>{{ student.student_bio }}</td>
                 <td class="actions">
-                    <a href="{% url 'editstudent' student.id %}">Edit</a>
+                    <button class="btn btn-success"><a href="{% url 'editstudent' student.id %}" style="color: black">Edit</a></button>
                     <form action="{% url 'student_delete' student.id %}" onclick="return confirm('Are you sure you want to delete the student?')" style="display: inline;">
                         {% csrf_token %}
-                        <button type="submit">Delete</button>
+                        <button type="submit" class="btn btn-danger">Delete</button>
                     </form>
                 </td>
             </tr>

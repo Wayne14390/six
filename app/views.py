@@ -1,6 +1,9 @@
 from django.contrib import messages
 from django.shortcuts import render, redirect, get_object_or_404
-
+from django.http import JsonResponse, HttpResponse
+from django_daraja.mpesa.core import MpesaClient
+from rest_framework import status
+from rest_framework.decorators import api_view
 from .forms import StudentForm, AppointmentForm
 from app.models import Student,Appointment
 
@@ -83,3 +86,38 @@ def student_delete(request, id):
         messages.error(request,'Student not deleted')
     return redirect('student_list')
 
+@api_view(['GET','POST'])
+def appointmentapi(request):
+    if request.method == "GET":
+        appointments = Appointment.objects.all()
+        serializer = AppointmentSerializer(appointments, many=True)
+        return JsonResponse(serializer.data, safe=False)
+    elif request.method == "POST":
+        serializer = AppointmentSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse(serializer.data, status.HTTP_201_CREATED)
+        return JsonResponse(serializer.errors, status.HTTP_400_BAD_REQUEST)
+
+@api_view(['GET','POST'])
+def studentapi(request):
+    if request.method == "GET":
+        students = Student.objects.all()
+        serializer = StudentSerializer(students, many=True)
+        return JsonResponse(serializer.data, safe=False)
+    elif request.method == "POST":
+        serializer = StudentSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse(serializer.data, status.HTTP_201_CREATED)
+        return JsonResponse(serializer.errors, status.HTTP_400_BAD_REQUEST)
+
+def mpesaapi(request):
+    client = MpesaClient()
+    phone_number = '0799723671'
+    amount = 1
+    account_reference = 'emobilis'
+    transaction_desc = 'Full Stack fee payment'
+    callback_url = 'https://darajambili.herokuapp.com/express-payment';
+    response = client.stk_push(phone_number, amount, account_reference, transaction_desc, callback_url)
+    return HttpResponse(response)

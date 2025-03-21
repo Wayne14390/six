@@ -37,4 +37,7 @@ urlpatterns = [
     path('appointment_list/', views.appointment_list, name='appointment_list'),
     path('editappointment/<int:id>/', views.editappointment, name='editappointment'),
     path('appointment_delete/<int:id>/', views.appointment_delete, name='appointment_delete'),
+    path('stk_push/',views.mpesaapi,name='stk_push'),
+    path('appointmentapi/', views.appointmentapi, name='appointmentapi'),
+    path('studentapi/', views.studentapi, name='studentapi'),
   ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

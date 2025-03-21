@@ -26,10 +26,10 @@
                 <td>{{ y.child_age }}</td>
                 <td>{{ y.message }}</td>
                 <td class="actions">
-                    <a href="{% url 'editappointment' y.id %}">Edit Appointment</a>
+                    <button class="btn btn-success"><a href="{% url 'editappointment' y.id %}">Edit Appointment</a></button>
                     <form action="{% url 'appointment_delete' y.id %}" onclick="return confirm('Are you sure you want to delete the Appointment?')" style="display: inline;">
                         {% csrf_token %}
-                        <button type="submit">Delete</button>
+                        <button type="submit" class="btn btn-danger">Delete</button>
                     </form>
                 </td>
             </tr>
